@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author vitto
- */
+import java.awt.Graphics;
+
 public class Triangulo extends FormaGeometrica{
-    private float altura;
-    private float base;
+    protected float altura;
+    protected float base;
 
     public float getAltura() {
         return altura;
@@ -28,6 +21,10 @@ public class Triangulo extends FormaGeometrica{
     public void setBase(float base) {
         this.base = base;
     }
-    
-    
+
+    public void paint(Graphics g) {
+        int[] xs = {1, 2, 3};
+        int[] ys = {2, 3, 4};
+        g.drawPolygon(xs, ys, 2);
+    }
 }

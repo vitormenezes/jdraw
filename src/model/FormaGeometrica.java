@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author vitto
- */
-public abstract class FormaGeometrica {
-    private String cor;
-    private int dimensao;
+import java.awt.Graphics;
 
+public abstract class FormaGeometrica {
+    protected String cor;
     
+
     public String getCor() {
         return cor;
     }
@@ -22,13 +14,5 @@ public abstract class FormaGeometrica {
         this.cor = cor;
     }
 
-    public int getDimensao() {
-        return dimensao;
-    }
-
-    public void setDimensao(int dimensao) {
-        this.dimensao = dimensao;
-    }
-    
-    
+    public abstract void paint(Graphics g);
 }
